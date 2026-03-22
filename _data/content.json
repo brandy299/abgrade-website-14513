@@ -1,0 +1,50 @@
+{
+  "stats": [
+    { "value": 245, "suffix": "+", "label": "Network Members" },
+    { "value": 43,  "suffix": "",  "label": "Countries Represented" },
+    { "value": 12,  "suffix": "",  "label": "Events Held" },
+    { "value": 502, "suffix": "",  "label": "Total Participants" }
+  ],
+  "calendar": [
+    {
+      "name": "AbGradE 2026",
+      "date": "Aug 31, 2026",
+      "link": ""
+    },
+    {
+      "name": "EANA 2026",
+      "date": "Sep 1 – Sep 4, 2026",
+      "link": "https://www.eana-net.eu/"
+    }
+  ],
+  "jobs": [
+    {
+      "title": "Call for Candidates: MSCA Postdoctoral Fellowship on Lipids of Halophiles",
+      "tag": "Fellowship",
+      "date": "Mar 20, 2026",
+      "link": "https://abgrade.eu/2026/03/20/call-for-candidates-interested-in-preparing-a-msca-postdoctoral-fellowship-on-lipids-of-halophiles/"
+    },
+    {
+      "title": "Internal Research Fellow (Postdoc) in Planetary Protection at the European Space Agency",
+      "tag": "Postdoc",
+      "date": "Mar 19, 2026",
+      "link": "https://abgrade.eu/2026/03/19/internal-research-fellow-postdoc-in-planetary-protection-at-the-european-space-agency/"
+    }
+  ],
+  "events": [
+    {
+      "title": "5th Interdisciplinary Origin of Life Meeting (OoLEN) — Tokyo, Japan",
+      "tag": "Conference",
+      "date": "Feb 18, 2026",
+      "link": "https://abgrade.eu/2026/02/18/5th-interdisciplinary-origin-of-life-meeting-from-oolen-in-tokyo-japan/"
+    }
+  ],
+  "seminars": [
+    {
+      "title": "Save the Date – ESA–NASA Omics Data Sharing Seminar",
+      "tag": "Seminar",
+      "date": "Mar 6, 2026",
+      "link": "https://abgrade.eu/2026/03/06/save-the-date-esa-nasa-omics-data-sharing-seminar/"
+    }
+  ]
+}

@@ -5,96 +5,79 @@ backend:
 media_folder: "images"
 public_folder: "/images"
 
-# Netlify Identity
-site_url: https://your-site.netlify.app  # ← wird automatisch gesetzt nach Deploy
-
 collections:
 
-  # ─────────────────────────────────────────────────────────
-  # JOB POSITIONS
-  # ─────────────────────────────────────────────────────────
   - name: "jobs"
     label: "Job Positions"
-    label_singular: "Job Position"
-    folder: "_jobs"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    file: "_data/jobs.json"
     fields:
-      - { label: "Titel",  name: "title", widget: "string" }
-      - label: "Tag"
-        name: "tag"
-        widget: "select"
-        options: ["Fellowship", "Postdoc", "PhD", "Position"]
-        default: "Position"
-      - { label: "Datum",  name: "date",  widget: "date", format: "MMM DD, YYYY" }
-      - { label: "Link",   name: "link",  widget: "string", required: false }
+      - label: "Job Positions"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - label: "Tag"
+            name: "tag"
+            widget: "select"
+            options: ["Fellowship", "Postdoc", "PhD", "Position"]
+            default: "Position"
+          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Mar 20, 2026" }
+          - { label: "Link",  name: "link", widget: "string", required: false }
 
-  # ─────────────────────────────────────────────────────────
-  # EVENTS
-  # ─────────────────────────────────────────────────────────
   - name: "events"
     label: "Meetings & Events"
-    label_singular: "Event"
-    folder: "_events"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    file: "_data/events.json"
     fields:
-      - { label: "Titel",  name: "title", widget: "string" }
-      - label: "Tag"
-        name: "tag"
-        widget: "select"
-        options: ["Conference", "Workshop", "Meeting", "Online"]
-        default: "Conference"
-      - { label: "Datum",  name: "date",  widget: "date", format: "MMM DD, YYYY" }
-      - { label: "Link",   name: "link",  widget: "string", required: false }
+      - label: "Meetings & Events"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - label: "Tag"
+            name: "tag"
+            widget: "select"
+            options: ["Conference", "Workshop", "Meeting", "Online"]
+            default: "Conference"
+          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Feb 18, 2026" }
+          - { label: "Link",  name: "link", widget: "string", required: false }
 
-  # ─────────────────────────────────────────────────────────
-  # SEMINARS
-  # ─────────────────────────────────────────────────────────
   - name: "seminars"
     label: "Seminars"
-    label_singular: "Seminar"
-    folder: "_seminars"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    file: "_data/seminars.json"
     fields:
-      - { label: "Titel",  name: "title", widget: "string" }
-      - label: "Tag"
-        name: "tag"
-        widget: "select"
-        options: ["Seminar", "Webinar", "Online"]
-        default: "Seminar"
-      - { label: "Datum",  name: "date",  widget: "date", format: "MMM DD, YYYY" }
-      - { label: "Link",   name: "link",  widget: "string", required: false }
-
-  # ─────────────────────────────────────────────────────────
-  # CALENDAR (Sidebar)
-  # ─────────────────────────────────────────────────────────
-  - name: "calendar"
-    label: "Calendar Events (Sidebar)"
-    label_singular: "Calendar Entry"
-    folder: "_calendar"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Name",   name: "name", widget: "string" }
-      - { label: "Datum",  name: "date", widget: "string", hint: "e.g. Aug 31, 2026 or Sep 1 – Sep 4, 2026" }
-      - { label: "Link",   name: "link", widget: "string", required: false }
-
-  # ─────────────────────────────────────────────────────────
-  # STATISTICS
-  # ─────────────────────────────────────────────────────────
-  - name: "settings"
-    label: "Site Settings"
-    files:
-      - name: "stats"
-        label: "Statistics (Homepage)"
-        file: "_data/stats.yml"
+      - label: "Seminars"
+        name: "items"
+        widget: "list"
         fields:
-          - label: "Statistiken"
-            name: "stats"
-            widget: "list"
-            fields:
-              - { label: "Wert",  name: "value",  widget: "number" }
-              - { label: "Suffix", name: "suffix", widget: "string", required: false }
-              - { label: "Label", name: "label",  widget: "string" }
+          - { label: "Titel", name: "title", widget: "string" }
+          - label: "Tag"
+            name: "tag"
+            widget: "select"
+            options: ["Seminar", "Webinar", "Online"]
+            default: "Seminar"
+          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Mar 6, 2026" }
+          - { label: "Link",  name: "link", widget: "string", required: false }
+
+  - name: "calendar"
+    label: "Calendar (Sidebar)"
+    file: "_data/calendar.json"
+    fields:
+      - label: "Calendar Events"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Name",  name: "name", widget: "string" }
+          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Aug 31, 2026" }
+          - { label: "Link",  name: "link", widget: "string", required: false }
+
+  - name: "stats"
+    label: "Statistics (Homepage)"
+    file: "_data/stats.json"
+    fields:
+      - label: "Statistiken"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Wert",   name: "value",  widget: "number" }
+          - { label: "Suffix", name: "suffix", widget: "string", required: false, hint: "z.B. + oder leer" }
+          - { label: "Label",  name: "label",  widget: "string" }
