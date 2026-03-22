@@ -135,17 +135,15 @@ function renderContent(c) {
   renderCards('tab-seminars', c.seminars, 'Seminar',  'sem');
 }
 
-/* ── Re-observe dynamically added .reveal elements ── */
+/* ── Make dynamically added .reveal elements visible ── */
+/* content.js runs async so main.js IntersectionObserver already ran —  */
+/* just immediately reveal all elements that aren't visible yet.         */
 function reobserveReveal() {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 55);
-        io.unobserve(e.target);
-      }
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      el.classList.add('visible');
     });
-  }, { threshold: 0.07 });
-  document.querySelectorAll('.reveal:not(.visible)').forEach(el => io.observe(el));
+  });
 }
 
 /* ── Start ── */
