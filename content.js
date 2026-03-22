@@ -133,6 +133,58 @@ function renderContent(c) {
   renderCards('tab-jobs',     c.jobs,     'Position', '');
   renderCards('tab-events',   c.events,   'Event',    'ev');
   renderCards('tab-seminars', c.seminars, 'Seminar',  'sem');
+
+  /* Opportunities page — fill per-type tabs from the same jobs list */
+  renderOpportunities(c.jobs);
+}
+
+/* ── Opportunities page renderer ── */
+function renderOpportunities(jobs) {
+  if (!document.getElementById('tab-postdoc')) return; // not on opportunities page
+
+  function fillTab(id, items, emptyMsg) {
+    const panel = document.getElementById(id);
+    if (!panel) return;
+    const list = panel.querySelector('.news-list');
+    if (!list || !items.length) return;
+
+    /* For fellowships we keep the permanent programme links at the bottom */
+    const permanent = id === 'tab-fellowships'
+      ? Array.from(list.querySelectorAll('.news-card'))
+      : [];
+
+    list.innerHTML = '';
+
+    items.forEach(item => {
+      const card = document.createElement('a');
+      card.className = 'news-card';
+      card.href   = item.link || '#';
+      card.target = item.link ? '_blank' : '';
+      card.innerHTML = `
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+          </svg>
+        </div>
+        <div>
+          <div class="card-meta">
+            <span class="card-tag">${item.tag || 'Position'}</span>
+            ${item.date ? `<span class="card-date">${item.date}</span>` : ''}
+          </div>
+          <div class="card-title">${item.title}</div>
+        </div>`;
+      list.appendChild(card);
+    });
+
+    /* Re-append permanent links (MSCA, ESA programme pages etc.) */
+    permanent.forEach(el => list.appendChild(el));
+  }
+
+  fillTab('tab-postdoc',    jobs.filter(j => j.tag === 'Postdoc' || j.tag === 'Position'));
+  fillTab('tab-phd',        jobs.filter(j => j.tag === 'PhD'));
+  fillTab('tab-fellowships',jobs.filter(j => j.tag === 'Fellowship'));
 }
 
 /* ── Make dynamically added .reveal elements visible ── */
