@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Astrobiology? – AbGradE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.svg" class="nav-logo-img" alt="AbGradE logo">
+    <span class="nav-logo-text">AbGradE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="astrobiology.html">Astrobiology</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="opportunities.html">Opportunities</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-scan"></div>
+  <div class="page-header-inner">
+    <div class="page-header-label">The Science</div>
+    <h1 class="page-header-title">What is Astrobiology?</h1>
+    <p class="page-header-desc">Astrobiology is the study of the nature and extent of life in the Universe — an inherently interdisciplinary field connecting astronomy, chemistry, biology, geology, and beyond.</p>
+  </div>
+</header>
+
+<div class="content">
+  <div class="content-grid">
+    <main>
+
+      <!-- DISCIPLINES -->
+      <div class="label-row"><span class="label-text">Disciplines</span></div>
+      <h2 class="section-title">An Umbrella Science</h2>
+      <div class="disc-grid">
+        <div class="disc-card">
+          <div class="disc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+          <div class="disc-name">Astronomy</div>
+        </div>
+        <div class="disc-card">
+          <div class="disc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+          <div class="disc-name">Chemistry</div>
+        </div>
+        <div class="disc-card">
+          <div class="disc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 9.5V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4.5"/><path d="M4 15.5C2.5 15 2 14 2 12.5c0-2 1.5-3 3-3h14c1.5 0 3 1 3 3 0 1.5-.5 2.5-2 3"/><path d="M12 12v9"/><path d="M8 17l4 4 4-4"/></svg></div>
+          <div class="disc-name">Biology</div>
+        </div>
+        <div class="disc-card">
+          <div class="disc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></div>
+          <div class="disc-name">Geology</div>
+        </div>
+        <div class="disc-card">
+          <div class="disc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+          <div class="disc-name">Engineering</div>
+        </div>
+        <div class="disc-card">
+          <div class="disc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div class="disc-name">Social Sciences</div>
+        </div>
+      </div>
+
+      <!-- MAIN PROSE -->
+      <div class="label-row"><span class="label-text">Overview</span></div>
+      <h2 class="section-title">The Big Questions</h2>
+      <div class="prose">
+        <p>The only known example of life in the Universe is that on Earth. We recognize this life as a complex state of matter evolving in our planet's dynamic environment. By studying life on Earth we are able to begin to extrapolate our findings to other worlds and critically evaluate whether such phenomena may have occurred there.</p>
+
+        <h2>What Astrobiology Seeks to Understand</h2>
+        <p>Astrobiology aims to understand the physicochemical conditions and geological requirements for the emergence of life — what elements and molecules can constitute life, what the environmental and physiological limits of life are, where in the cosmos it can be found, and how it might be recognised.</p>
+
+        <p>When inquiring into the nature and extent of life in the Universe, the questions vary depending on the discipline. An astronomer might search for <strong>habitable astrophysical objects</strong>, while a chemist might wonder what phenomena initially constitute a habitable body or environment. No question in astrobiology is isolated — all are posed within a broader context.</p>
+
+        <h2>An Interdisciplinary Endeavour</h2>
+        <p>The open questions that astrobiology addresses are inherently interdisciplinary and, as such, require collaboration across various fields of research. Astrobiology manifests itself as an umbrella field encompassing many disciplines, including astronomy, chemistry, biology, geology, engineering, law, history, social sciences and more.</p>
+
+        <p>The study of astrobiology is an attempt to broaden our understanding of life as we know it and to view life as a <strong>cosmic phenomenon</strong>. In so doing, astrobiology addresses a deep human fascination — and by no means a new one. It is an incredibly exciting time for the field, with more cross-disciplinary research than ever before.</p>
+
+        <h2>Become an Astrobiologist</h2>
+        <p>Three AbGradE committee members gave a seminar for the EAI on how to become an astrobiologist from an early-career perspective. The video is a fantastic introduction to the pathways, challenges, and opportunities in this growing field.</p>
+      </div>
+
+      <!-- VIDEO PLACEHOLDER -->
+      <div class="video-wrap reveal">
+        <div class="video-placeholder">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <p>EAI Seminar — How to Become an Astrobiologist</p>
+          <a href="https://abgrade.eu/what-is-astrobiology/" target="_blank" class="btn btn-outline btn-sm" style="margin-top:.5rem;">Watch on abgrade.eu</a>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="s-card">
+        <div class="s-title">// Key Questions</div>
+        <div class="cal-item"><div class="cal-name">Origins of Life</div><div class="cal-date">How did life first arise?</div></div>
+        <div class="cal-item"><div class="cal-name">Limits of Life</div><div class="cal-date">Where can life survive?</div></div>
+        <div class="cal-item"><div class="cal-name">Search for Life</div><div class="cal-date">Are we alone in the cosmos?</div></div>
+        <div class="cal-item"><div class="cal-name">Human Exploration</div><div class="cal-date">What does it mean to go beyond Earth?</div></div>
+      </div>
+      <div class="s-card">
+        <div class="s-title">// Related Links</div>
+        <div class="social-row" style="flex-direction:column; gap:.5rem;">
+          <a href="https://www.eana-net.eu/" class="soc-link" target="_blank" style="width:100%;text-align:center;">EANA Network</a>
+          <a href="https://www.europeanastrobiology.eu/" class="soc-link" target="_blank" style="width:100%;text-align:center;">European Astrobiology Institute</a>
+          <a href="opportunities.html" class="soc-link" style="width:100%;text-align:center;">Open Positions</a>
+        </div>
+      </div>
+      <div class="s-card">
+        <div class="s-title">// Join the Network</div>
+        <p class="about-text" style="margin-bottom:1rem;">Connect with early-career astrobiologists across Europe.</p>
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-btn">Subscribe to Newsletter</button>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand"><img src="logo.svg" class="footer-logo-img" alt=""> AbGradE</div>
+  <nav class="footer-nav">
+    <a href="about.html">About</a><a href="astrobiology.html">Astrobiology</a>
+    <a href="events.html">Events</a><a href="opportunities.html">Opportunities</a>
+    <a href="resources.html">Resources</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 AbGradE – Astrobiology Graduates in Europe</div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); }
+    });
+  }
+</script>
+</body>
+</html>

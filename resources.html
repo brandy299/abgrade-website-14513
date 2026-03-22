@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources – AbGradE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.svg" class="nav-logo-img" alt="AbGradE logo">
+    <span class="nav-logo-text">AbGradE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="astrobiology.html">Astrobiology</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="opportunities.html">Opportunities</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-scan"></div>
+  <div class="page-header-inner">
+    <div class="page-header-label">Resources</div>
+    <h1 class="page-header-title">Network &amp; Resources</h1>
+    <p class="page-header-desc">Find your national AbGradE contact, discover member publications, and access educational resources for early-career astrobiologists.</p>
+  </div>
+</header>
+
+<div class="content">
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'contacts')">National Contacts</button>
+    <button class="tab-btn" onclick="switchTab(this,'education')">Education</button>
+    <button class="tab-btn" onclick="switchTab(this,'publications')">Member Publications</button>
+  </div>
+
+  <!-- NATIONAL CONTACTS -->
+  <div class="tab-panel active" id="tab-contacts">
+    <div class="label-row"><span class="label-text">By Country</span></div>
+    <h2 class="section-title" style="margin-bottom:2rem;">Find Your Contact</h2>
+    <div class="country-grid">
+
+      <div class="country-card">
+        <div class="country-name">🇦🇹 Austria</div>
+        <div class="contact-entry">
+          <div class="contact-person">Hayk Palabikyan</div>
+          <div class="contact-email">hayk.palabikyan (at) gmail.com</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇫🇷 France</div>
+        <div class="contact-entry">
+          <div class="contact-person">Luise Jumpertz</div>
+          <div class="contact-email">luise.jumpertz (at) univ-amu.fr</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇩🇪 Germany</div>
+        <div class="contact-entry">
+          <div class="contact-person">Cecilia Ricci</div>
+          <div class="contact-email">cecilia.ricci (at) dlr.de</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Florian Carlo Fischer</div>
+          <div class="contact-email">florian.carlo.fischer (at) outlook.de</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Martina Ferrara</div>
+          <div class="contact-email">mferrara (at) constructor.university</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Pablo de Lucía Finkel</div>
+          <div class="contact-email">plfinkel (at) cab.inta-csic.es</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Stella Marie Timofeev</div>
+          <div class="contact-email">stella.timofeev (at) dlr.de</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇬🇷 Greece</div>
+        <div class="contact-entry">
+          <div class="contact-person">Hector-Andreas Stavrakakis</div>
+          <div class="contact-email">hecstavrakakis (at) gmail.com</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇮🇹 Italy</div>
+        <div class="contact-entry">
+          <div class="contact-person">Andrew Alberini</div>
+          <div class="contact-email">andrew.alberini (at) inaf.it</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Christian Lorenz</div>
+          <div class="contact-email">christian.lorenz (at) inaf.it</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Costanza Maria Martella</div>
+          <div class="contact-email">costanzamariamartella (at) gmail.com</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Elisabetta Liistro</div>
+          <div class="contact-email">elisabetta.liistro (at) unipd.it</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Maria Teresa Muscari Tomajoli</div>
+          <div class="contact-email">mariateresa.muscari (at) gmail.com</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Mariano Battistuzzi</div>
+          <div class="contact-email">mariano.battistuzzi (at) inaf.it</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Nina Kopacz</div>
+          <div class="contact-email">k.a.kopacz (at) gmail.com</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇳🇱 Netherlands</div>
+        <div class="contact-entry">
+          <div class="contact-person">Alexandra Zetterlind</div>
+          <div class="contact-email">a.o.zetterlind (at) uu.nl</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Orr Rose Bezaly</div>
+          <div class="contact-email">o.r.bezaly (at) uva.nl</div>
+        </div>
+        <div class="contact-entry" style="margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--border);">
+          <div class="contact-person" style="font-size:.8rem;color:var(--text-mid);">PEPSci Network (PhDs &amp; Postdocs)</div>
+          <div class="contact-email">pepsci.network (at) gmail.com</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇵🇹 Portugal</div>
+        <div class="contact-entry">
+          <div class="contact-person">Afonso Mota</div>
+          <div class="contact-email">Afonso.Mota (at) astro.up.pt</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇪🇸 Spain</div>
+        <div class="contact-entry">
+          <div class="contact-person">Eduardo Alonso Pintado</div>
+          <div class="contact-email">eduardo.alonso (at) edu.uah.es</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Silvana Pinna</div>
+          <div class="contact-email">spinna (at) cab.inta-csic.es</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-name">🇬🇧 United Kingdom</div>
+        <div class="contact-entry">
+          <div class="contact-person">Ben Tatton</div>
+          <div class="contact-email">ben.tatton (at) open.ac.uk</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Inês Figueiredo</div>
+          <div class="contact-email">pereiraines2000 (at) gmail.com</div>
+        </div>
+        <div class="contact-entry">
+          <div class="contact-person">Samir Chitnavis</div>
+          <div class="contact-email">s.chitnavis (at) qmul.ac.uk</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="tab-panel" id="tab-education">
+    <div class="label-row"><span class="label-text">Learn</span></div>
+    <h2 class="section-title" style="margin-bottom:2rem;">Educational Resources</h2>
+    <div class="events-list">
+      <div class="event-card">
+        <div class="event-name">What is Astrobiology?</div>
+        <p class="event-desc">New to astrobiology? Our dedicated page explains the field, its disciplines, and the big questions it seeks to answer — plus a video seminar from AbGradE committee members on how to become an astrobiologist.</p>
+        <div style="margin-top:1rem;"><a href="astrobiology.html" class="btn btn-outline btn-sm">Learn More</a></div>
+      </div>
+      <div class="event-card">
+        <div class="event-name">EAI — European Astrobiology Institute</div>
+        <p class="event-desc">The European Astrobiology Institute hosts educational resources, seminars, and training schools for early-career researchers. A strong partner of AbGradE.</p>
+        <div style="margin-top:1rem;"><a href="https://www.europeanastrobiology.eu/" target="_blank" class="btn btn-outline btn-sm">Visit EAI</a></div>
+      </div>
+      <div class="event-card">
+        <div class="event-name">EANA — European Astrobiology Network Association</div>
+        <p class="event-desc">EANA provides resources, funding information, and community support for astrobiology researchers across Europe. AbGradE is closely affiliated with EANA.</p>
+        <div style="margin-top:1rem;"><a href="https://www.eana-net.eu/" target="_blank" class="btn btn-outline btn-sm">Visit EANA</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="tab-panel" id="tab-publications">
+    <div class="label-row"><span class="label-text">Research</span></div>
+    <h2 class="section-title" style="margin-bottom:2rem;">Member Publications</h2>
+    <div class="event-card" style="max-width:680px;">
+      <div class="event-name">Share Your Work</div>
+      <p class="event-desc">AbGradE members are actively publishing research across the fields of astrobiology, space science, and related disciplines. If you are an AbGradE member and would like your publications listed here, please get in touch.</p>
+      <div style="margin-top:1.25rem;"><a href="contact.html" class="btn btn-outline btn-sm">Submit Publications</a></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand"><img src="logo.svg" class="footer-logo-img" alt=""> AbGradE</div>
+  <nav class="footer-nav">
+    <a href="about.html">About</a><a href="astrobiology.html">Astrobiology</a>
+    <a href="events.html">Events</a><a href="opportunities.html">Opportunities</a>
+    <a href="resources.html">Resources</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 AbGradE – Astrobiology Graduates in Europe</div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); }
+    });
+  }
+</script>
+</body>
+</html>

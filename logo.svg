@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 144 144" role="img" aria-label="AbGradE logo">
+  <defs>
+    <!-- Planet: vivid electric blue -->
+    <radialGradient id="pg" cx="34%" cy="28%" r="68%">
+      <stop offset="0%"   stop-color="#2b8fff"/>
+      <stop offset="40%"  stop-color="#0a2a6e"/>
+      <stop offset="100%" stop-color="#020a1e"/>
+    </radialGradient>
+    <!-- Moon: neon amber -->
+    <radialGradient id="moonGrad" cx="28%" cy="25%" r="72%">
+      <stop offset="0%"   stop-color="#ffe04a"/>
+      <stop offset="100%" stop-color="#c05500"/>
+    </radialGradient>
+    <!-- Tight glow: stars -->
+    <filter id="glowStar" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Tight glow: green molecular -->
+    <filter id="glowGreen" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.4" result="blur"/>
+      <feFlood flood-color="#00ff88" flood-opacity="0.55" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="colorBlur"/>
+      <feMerge><feMergeNode in="colorBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Tight glow: gold ring -->
+    <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+      <feFlood flood-color="#ffaa00" flood-opacity="0.6" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="colorBlur"/>
+      <feMerge><feMergeNode in="colorBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Tight glow: cyan atmosphere -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Text arc paths -->
+    <path id="arc-top" d="M 7,60 A 53,53 0 0,1 113,60"/>
+    <path id="arc-bot" d="M 23,99 A 53,53 0 0,0 97,99"/>
+  </defs>
+
+  <!-- LAYER 1: Outer ring (gold) -->
+  <circle cx="60" cy="60" r="57"   fill="none" stroke="#ffcc00" stroke-width="2.0" opacity="0.90" filter="url(#glowGold)"/>
+  <circle cx="60" cy="60" r="53.5" fill="none" stroke="#ffcc00" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- LAYER 2: Orbital ring back half (dashed, behind planet) -->
+  <ellipse cx="55" cy="74" rx="53" ry="17.5"
+           fill="none" stroke="#ff9e00" stroke-width="2.2"
+           stroke-dasharray="4.5,3.2"
+           transform="rotate(-14 55 74)" opacity="0.45"/>
+
+  <!-- LAYER 3: Planet body -->
+  <circle cx="55" cy="60" r="38" fill="url(#pg)"/>
+  <circle cx="55" cy="60" r="38" fill="none"
+          stroke="#00d2ff" stroke-width="2.2" opacity="0.70" filter="url(#glowCyan)"/>
+
+  <!-- LAYER 4: Star constellation (on planet face) -->
+  <g filter="url(#glowStar)">
+    <circle cx="29" cy="43" r="3.4"  fill="#ffe234" opacity="1.0"/>
+    <circle cx="41" cy="33" r="2.6"  fill="#ffe234" opacity="0.95"/>
+    <circle cx="53" cy="39" r="3.8"  fill="#ffe234" opacity="1.0"/>
+    <circle cx="35" cy="55" r="2.0"  fill="#ffe234" opacity="0.88"/>
+    <circle cx="47" cy="51" r="2.3"  fill="#ffe234" opacity="0.92"/>
+  </g>
+  <g stroke="#ffe234" stroke-width="0.8" stroke-dasharray="2,2.5" fill="none" opacity="0.55">
+    <line x1="29" y1="43" x2="41" y2="33"/>
+    <line x1="41" y1="33" x2="53" y2="39"/>
+    <line x1="53" y1="39" x2="47" y2="51"/>
+    <line x1="47" y1="51" x2="35" y2="55"/>
+    <line x1="35" y1="55" x2="29" y2="43"/>
+  </g>
+
+  <!-- LAYER 5: Orbital ring front half (solid, over planet) -->
+  <ellipse cx="55" cy="74" rx="53" ry="17.5"
+           fill="none" stroke="#ffaa00" stroke-width="2.8"
+           transform="rotate(-14 55 74)" opacity="0.95" filter="url(#glowGold)"/>
+
+  <!-- LAYER 6: Moon / satellite -->
+  <circle cx="11" cy="82" r="7.8" fill="url(#moonGrad)" filter="url(#glowStar)"/>
+  <circle cx="14" cy="80" r="7.8" fill="rgba(2,10,30,0.40)"/>
+
+  <!-- LAYER 7: Molecular structure — FRONT (on top of ring and planet) -->
+  <g transform="translate(64, 36)" stroke="#00ff88" stroke-width="1.6"
+     fill="none" filter="url(#glowGreen)">
+    <polygon points="10,0 23,7 23,21 10,28 -3,21 -3,7"/>
+    <polygon points="23,7 37,4 43,18 35,28 23,21"/>
+    <line x1="-1" y1="9"  x2="9"  y2="2" stroke-width="1.0" opacity="0.75"/>
+    <line x1="-1" y1="19" x2="9"  y2="26" stroke-width="1.0" opacity="0.75"/>
+  </g>
+  <!-- Atom labels (also in front) -->
+  <g font-family="'Courier New', Courier, monospace" font-size="4.6"
+     fill="#00ff88" opacity="0.95" filter="url(#glowGreen)">
+    <text x="74"  y="43">N</text>
+    <text x="85"  y="41">N</text>
+    <text x="71"  y="57">Mg²⁺</text>
+    <text x="62"  y="67">O</text>
+  </g>
+
+  <!-- LAYER 8: Circular text (topmost) -->
+  <text font-size="5.8" fill="#7accff" letter-spacing="2.4"
+        font-family="'Space Mono', 'Courier New', monospace" opacity="0.85">
+    <textPath href="#arc-top" startOffset="4.5%">ASTROBIOLOGY GRADUATES</textPath>
+  </text>
+  <text font-size="5.8" fill="#7accff" letter-spacing="2.4"
+        font-family="'Space Mono', 'Courier New', monospace" opacity="0.85">
+    <textPath href="#arc-bot" startOffset="22%">IN EUROPE</textPath>
+  </text>
+</svg>

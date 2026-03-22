@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – AbGradE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.svg" class="nav-logo-img" alt="AbGradE logo">
+    <span class="nav-logo-text">AbGradE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="astrobiology.html">Astrobiology</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="opportunities.html">Opportunities</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-scan"></div>
+  <div class="page-header-inner">
+    <div class="page-header-label">Get in Touch</div>
+    <h1 class="page-header-title">Contact Us</h1>
+    <p class="page-header-desc">Don't hesitate to reach out — whether you have a question, want to collaborate, or would like to submit a job opportunity or event.</p>
+  </div>
+</header>
+
+<div class="content">
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div>
+      <div class="label-row"><span class="label-text">Send a Message</span></div>
+      <h2 class="section-title">Reach Out</h2>
+      <form action="https://abgrade.eu/contact-us/" method="post" target="_blank">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="form-field">
+            <label class="form-label">Name <span style="color:var(--red)">*</span></label>
+            <input class="form-input" type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label class="form-label">Email <span style="color:var(--red)">*</span></label>
+            <input class="form-input" type="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Subject</label>
+          <input class="form-input" type="text" name="subject" placeholder="What is this about?">
+        </div>
+        <div class="form-field">
+          <label class="form-label">Message <span style="color:var(--red)">*</span></label>
+          <textarea class="form-textarea" name="message" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Transmit Message</button>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div style="display:flex;flex-direction:column;gap:1.2rem;">
+
+      <div class="contact-info-card">
+        <div class="s-title">// Contact Details</div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-val"><a href="mailto:abgrade@eana-net.eu">abgrade (at) eana-net.eu</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Response Time</div>
+          <div class="contact-detail-val">We aim to respond within 5–7 working days.</div>
+        </div>
+        <div class="contact-detail" style="margin-bottom:0;">
+          <div class="contact-detail-label">National Contacts</div>
+          <div class="contact-detail-val"><a href="resources.html">Find your country representative →</a></div>
+        </div>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="s-title">// Follow Us</div>
+        <div class="social-row" style="flex-direction:column;gap:.6rem;">
+          <a class="soc-link" href="https://x.com/abgradeurope" target="_blank" style="width:100%;text-align:center;">X / Twitter — @abgradeurope</a>
+          <a class="soc-link" href="https://www.linkedin.com/company/abgrade/" target="_blank" style="width:100%;text-align:center;">LinkedIn — AbGradE</a>
+          <a class="soc-link" href="https://www.facebook.com/AbGradE" target="_blank" style="width:100%;text-align:center;">Facebook — AbGradE</a>
+          <a class="soc-link" href="https://www.instagram.com/_abgrade_/" target="_blank" style="width:100%;text-align:center;">Instagram — @_abgrade_</a>
+        </div>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="s-title">// Submit Opportunities</div>
+        <p class="about-text" style="margin-bottom:.75rem;">Have a job opening, event, or announcement to share with the AbGradE network?</p>
+        <p class="about-text">Use the form to the left and include all relevant details. We will review and publish it as soon as possible.</p>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="s-title">// Newsletter</div>
+        <p class="about-text" style="margin-bottom:1rem;">Join 245+ subscribers receiving updates on opportunities, events, and AbGradE news.</p>
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-btn">Subscribe to Newsletter</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand"><img src="logo.svg" class="footer-logo-img" alt=""> AbGradE</div>
+  <nav class="footer-nav">
+    <a href="about.html">About</a><a href="astrobiology.html">Astrobiology</a>
+    <a href="events.html">Events</a><a href="opportunities.html">Opportunities</a>
+    <a href="resources.html">Resources</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 AbGradE – Astrobiology Graduates in Europe</div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); }
+    });
+  }
+</script>
+</body>
+</html>

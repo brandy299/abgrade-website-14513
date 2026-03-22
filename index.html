@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbGradE – Astrobiology Graduates in Europe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.svg" class="nav-logo-img" alt="AbGradE logo">
+    <span class="nav-logo-text">AbGradE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="astrobiology.html">Astrobiology</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="opportunities.html">Opportunities</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="ring"></div>
+  <div class="scan-beam"></div>
+  <div class="hero-corner hero-corner--tl"></div>
+  <div class="hero-corner hero-corner--tr"></div>
+  <div class="hero-corner hero-corner--bl"></div>
+  <div class="hero-corner hero-corner--br"></div>
+
+  <!-- DNA Helix decoration (secondary, kept for main.js) -->
+  <svg id="dna-helix" viewBox="0 0 80 400" xmlns="http://www.w3.org/2000/svg" style="display:none"></svg>
+
+  <div class="hero-body">
+    <p class="hero-eyebrow">Space Science &amp; Biology · Early-Career European Network</p>
+    <h1 class="hero-title">Ab<em>Grad</em>E</h1>
+    <p class="hero-sub">Astrobiology Graduates in Europe</p>
+    <p class="hero-desc">Where <span style="color:var(--cyan)">space science</span> meets <span style="color:var(--green)">the biology of life</span> — connecting early-career researchers across Europe in the search for life beyond Earth.</p>
+    <div class="hero-cta">
+      <a href="opportunities.html" class="btn btn-primary">Explore Opportunities</a>
+      <a href="about.html" class="btn btn-outline">Join the Network</a>
+    </div>
+  </div>
+
+  <!-- Logo Emblem — right side of hero -->
+  <div class="hero-emblem">
+    <img src="logo.svg" alt="AbGradE">
+  </div>
+
+  <div class="hero-scroll">
+    <span class="scroll-label">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- BIO DIVIDER: signal that we're about biology + space -->
+<div class="bio-divider">
+  <div class="bio-divider-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+  </div>
+  <span class="bio-divider-text">Life in the Universe — The Search Continues</span>
+</div>
+
+<!-- STATS — with count-up data attributes -->
+<div class="stats-band">
+  <div><div class="stat-val" data-target="245" data-suffix="+">0+</div><div class="stat-label">Network Members</div></div>
+  <div><div class="stat-val" data-target="43" data-suffix="">0</div><div class="stat-label">Countries Represented</div></div>
+  <div><div class="stat-val" data-target="12" data-suffix="">0</div><div class="stat-label">Events Held</div></div>
+  <div><div class="stat-val" data-target="502" data-suffix="">0</div><div class="stat-label">Total Participants</div></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+  <div class="content-grid">
+    <main>
+      <div class="label-row"><span class="label-text">Latest Updates</span></div>
+      <h2 class="section-title">Mission Control</h2>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(this,'jobs')">Job Positions</button>
+        <button class="tab-btn" onclick="switchTab(this,'events')">Meetings &amp; Events</button>
+        <button class="tab-btn" onclick="switchTab(this,'seminars')">Seminars</button>
+      </div>
+
+      <!-- JOBS — content.js updates these dynamically; static fallback shown if JS is off -->
+      <div class="tab-panel active" id="tab-jobs">
+        <div class="news-list">
+          <a class="news-card" href="https://abgrade.eu/2026/03/20/call-for-candidates-interested-in-preparing-a-msca-postdoctoral-fellowship-on-lipids-of-halophiles/" target="_blank">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+            <div>
+              <div class="card-meta"><span class="card-tag">Fellowship</span><span class="card-date">Mar 20, 2026</span></div>
+              <div class="card-title">Call for Candidates: MSCA Postdoctoral Fellowship on Lipids of Halophiles</div>
+            </div>
+          </a>
+          <a class="news-card" href="https://abgrade.eu/2026/03/19/internal-research-fellow-postdoc-in-planetary-protection-at-the-european-space-agency/" target="_blank">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <div>
+              <div class="card-meta"><span class="card-tag">Postdoc</span><span class="card-date">Mar 19, 2026</span></div>
+              <div class="card-title">Internal Research Fellow (Postdoc) in Planetary Protection at ESA</div>
+            </div>
+          </a>
+          <a class="news-card" href="opportunities.html">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <div>
+              <div class="card-meta"><span class="card-tag">All Positions</span></div>
+              <div class="card-title">View all open positions → Opportunities page</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- EVENTS — content.js updates these dynamically -->
+      <div class="tab-panel" id="tab-events">
+        <div class="news-list">
+          <a class="news-card" href="https://abgrade.eu/2026/02/18/5th-interdisciplinary-origin-of-life-meeting-from-oolen-in-tokyo-japan/" target="_blank">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div>
+              <div class="card-meta"><span class="card-tag ev">Conference</span><span class="card-date">Feb 18, 2026</span></div>
+              <div class="card-title">5th Interdisciplinary Origin of Life Meeting (OoLEN) — Tokyo, Japan</div>
+            </div>
+          </a>
+          <a class="news-card" href="events.html">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <div>
+              <div class="card-meta"><span class="card-tag ev">All Events</span></div>
+              <div class="card-title">View all upcoming and past events → Events page</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- SEMINARS — content.js updates these dynamically -->
+      <div class="tab-panel" id="tab-seminars">
+        <div class="news-list">
+          <a class="news-card" href="https://abgrade.eu/2026/03/06/save-the-date-esa-nasa-omics-data-sharing-seminar/" target="_blank">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div>
+              <div class="card-meta"><span class="card-tag sem">Seminar</span><span class="card-date">Mar 6, 2026</span></div>
+              <div class="card-title">Save the Date – ESA–NASA Omics Data Sharing Seminar</div>
+            </div>
+          </a>
+          <a class="news-card" href="events.html">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <div>
+              <div class="card-meta"><span class="card-tag sem">All Seminars</span></div>
+              <div class="card-title">View all seminars → Events page</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="s-card">
+        <div class="s-title">// Upcoming Events</div>
+      </div>
+      <div class="s-card">
+        <div class="s-title">// Subscribe to Updates</div>
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-btn">Subscribe to Network</button>
+      </div>
+      <div class="s-card">
+        <div class="s-title">// About AbGradE</div>
+        <p class="about-text">AbGradE connects early-career astrobiologists across Europe — fostering collaboration, scientific exchange, and careers in the search for life beyond Earth.</p>
+        <div class="social-row">
+          <a class="soc-link" href="https://x.com/abgradeurope" target="_blank">X / Twitter</a>
+          <a class="soc-link" href="https://www.linkedin.com/company/abgrade/" target="_blank">LinkedIn</a>
+          <a class="soc-link" href="https://www.facebook.com/AbGradE" target="_blank">Facebook</a>
+          <a class="soc-link" href="https://www.instagram.com/_abgrade_/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand"><img src="logo.svg" class="footer-logo-img" alt=""> AbGradE</div>
+  <nav class="footer-nav">
+    <a href="about.html">About</a><a href="astrobiology.html">Astrobiology</a>
+    <a href="events.html">Events</a><a href="opportunities.html">Opportunities</a>
+    <a href="resources.html">Resources</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 AbGradE – Astrobiology Graduates in Europe</div>
+</footer>
+
+<script src="content.js" defer></script>
+<script src="main.js" defer></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); }
+    });
+  }
+</script>
+</body>
+</html>
