@@ -135,10 +135,24 @@ function renderContent(c) {
   renderCards('tab-seminars', c.seminars, 'Seminar',  'sem');
 }
 
+/* ── Re-observe dynamically added .reveal elements ── */
+function reobserveReveal() {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 55);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => io.observe(el));
+}
+
 /* ── Start ── */
 async function init() {
   const data = await loadData();
   renderContent(data);
+  reobserveReveal();
 }
 
 if (document.readyState === 'loading') {
